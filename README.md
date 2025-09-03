@@ -2,8 +2,6 @@
 
 An AI-inspired web application for agriculture that focuses on crop yield prediction and provides a modern, responsive interface with user authentication, dashboard, history, and profile management.
 
-Arabic version below.
-
 ## Features
 - Modern landing page with services and testimonials
 - Authentication (Sign up / Sign in) using Firebase Auth
@@ -12,6 +10,10 @@ Arabic version below.
 - Prediction page (UI) for crop yield
 - Contact form integration (Web3Forms)
 - Responsive UI with accessible design
+
+### Machine Learning
+- The project leverages a machine learning model trained for crop yield prediction with high accuracy.
+- The web UI is designed to integrate with the ML model (served via API or embedded prediction service) to provide real-time/near real-time predictions.
 
 ## Tech Stack
 - HTML, CSS, JavaScript (no framework)
@@ -79,34 +81,3 @@ Issues and PRs are welcome. Please use clear commit messages and follow the exis
 
 ## License
 This project is for educational purposes. Add a license file if you plan to open-source formally.
-
----
-
-## العربية
-
-تطبيق ويب حديث لقطاع الزراعة يركّز على التنبؤ بإنتاجية المحاصيل مع واجهة تفاعلية واستجابة ممتازة، وتسجيل دخول، ولوحة تحكم، وإدارة ملف شخصي.
-
-المزايا:
-- صفحة رئيسية حديثة وخدمات وشهادات مستخدمين
-- تسجيل وإنشاء حساب عبر Firebase
-- صفحة معلوماتي لتعديل الاسم وكلمة المرور ورفع صورة شخصية
-- لوحة تحكم بها قسم الترحيب وآخر السجل
-- صفحة للتنبؤ بإنتاجية المحصول (واجهة)
-- نموذج تواصل عبر Web3Forms
-- تصميم متجاوب
-
-التشغيل محلياً:
-```
-cd src
-python -m http.server 8000
-```
-ثم افتح `http://localhost:8000`
-
-النشر على GitHub Pages:
-- من إعدادات الريبو → Pages → اختر الفرع `main` والمجلد `/src` ثم احفظ.
-
-ملاحظات الأمان:
-- لا تحفظ كلمة المرور كنص صريح في قاعدة البيانات. احذف الحقل `password` من مستند المستخدم في الإنتاج.
-- اضبط قواعد الحماية في Firebase بما يناسب مشروعك.
-
-إذا أردت تفعيل CI/CD أو تحسينات إضافية للتجربة، يسعدنا استقبال مساهماتك.
