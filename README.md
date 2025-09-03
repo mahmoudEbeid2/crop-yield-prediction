@@ -1,4 +1,4 @@
-# The Plant — Crop Yield Prediction (Static Web App)
+# The Plant — Crop Yield Prediction
 
 An AI-inspired web application for agriculture that focuses on crop yield prediction and provides a modern, responsive interface with user authentication, dashboard, history, and profile management.
 
