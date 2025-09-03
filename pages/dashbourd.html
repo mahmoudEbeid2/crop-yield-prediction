@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="keywords"
+      content="artificial intelligence,artificial intelligence in agriculture,agriculture,artificial intelligence (ai) in agriculture,ai in agriculture,(ai) artificial intelligence in agriculture,artificial intellegence agriculture,artificial intelligence is transforming agriculture,agriculture technology,artificial intelligence in agriculture and plant pathology,what is artificial intelligence,artificial intelligence robot,artificial intelligence explained"
+    />
+    <meta
+      name="description"
+      content="Agriculture with artificial intelligence revolutionizes farming through data-driven decisions. AI optimizes resource allocation, enhances crop monitoring, and predicts weather patterns for better yields. It streamlines tasks, minimizes waste, and promotes sustainable practices, ushering in a new era of precision farming."
+    />
+    <title>The Plant</title>
+    <!-- link with google font (Montserrat) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- link main css file -->
+    <link rel="stylesheet" href="../css/dashbourd/style.css" />
+    <link rel="stylesheet" href="../css/dashbourd/quierse.css" />
+    <!-- link db  -->
+    <script type="module" src="../js/display_info.js"></script>
+    <!-- log out  -->
+    <script type="module" src="../js/logout.js"></script>
+    <!-- login cheaker -->
+    <script type="module" src="../js/login-cheaker.js"></script>
+  </head>
+  <body>
+    <div class="page-content">
+      <!-- start header  -->
+      <header>
+        <div class="header-content">
+          <button class="menu-icon">
+            <ion-icon class="mc" name="menu-outline"></ion-icon>
+          </button>
+          <h1 class="main-head">dashbourd</h1>
+          <div class="user-content">
+            <div class="user-info">
+              <p id="uname" class="user-name">user name</p>
+              <img
+                id="ulogo"
+                src="../img/sign-up/avatar.png"
+                alt="user logo"
+                class="user-logo"
+              />
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- start saidbar -->
+      <nav>
+        <div class="nav-content">
+          <img src="../img/logo.png" alt="logo" class="logo" />
+          <ul class="nav-links">
+            <li class="nav-link active-link">
+              <a href="dashbourd.html"
+                ><ion-icon class="as-icon" name="home-outline"></ion-icon
+                ><span>dashbourd</span></a
+              >
+            </li>
+            <li class="nav-link">
+              <a href="my-info.html"
+                ><ion-icon
+                  class="as-icon"
+                  name="information-circle-outline"
+                ></ion-icon
+                ><span>my information</span></a
+              >
+            </li>
+            <li class="nav-link">
+              <a href="../pages/predection.html"
+                ><ion-icon class="as-icon" name="logo-ionitron"></ion-icon
+                ><span>yield predeaction</span></a
+              >
+            </li>
+            <li class="nav-link">
+              <a href="historey.html"
+                ><ion-icon class="as-icon" name="newspaper"></ion-icon
+                ><span>historey</span></a
+              >
+            </li>
+            <li class="nav-link">
+              <a href="cantact-us.html"
+                ><ion-icon class="as-icon" name="call-outline"></ion-icon
+                ><span>contact us</span></a
+              >
+            </li>
+
+            <li class="nav-link log-out">
+              <a id="logout" href="#"
+                ><ion-icon class="as-icon" name="log-out-outline"></ion-icon
+                ><span>log out</span></a
+              >
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <main>
+        <div class="dash-content">
+          <section class="welcem-card">
+            <div class="card-img" role="img"></div>
+            <div class="card-content">
+              <div class="card-text">
+                <p class="card-head">Welcam back To The Plant</p>
+                <p class="card-descrption">I hope all your crops are fine</p>
+              </div>
+              <a href="../pages/predection.html" class="card-btn"
+                >start use ai tools</a
+              >
+            </div>
+          </section>
+          <section class="dash2">
+            <div class="historey-table">
+              <h2 class="historey-head">last historey</h2>
+              <ul class="history">
+                <li>
+                  <span class="his">Year:</span
+                  ><span class="his-value">2024</span>
+                </li>
+                <li>
+                  <span class="his">Average Rainfall (Mm/Year):</span
+                  ><span class="his-value">50</span>
+                </li>
+                <li>
+                  <span class="his">Average Temperature:</span
+                  ><span class="his-value">30</span>
+                </li>
+                <li>
+                  <span class="his">Quantity of Pesticides (Tonnes):</span
+                  ><span class="his-value">1000</span>
+                </li>
+                <li>
+                  <span class="his">Country:</span
+                  ><span class="his-value">Egypt</span>
+                </li>
+                <li>
+                  <span class="his">Crop:</span
+                  ><span class="his-value">Potatoes</span>
+                </li>
+                <li>
+                  <span class="his">Prediction:</span
+                  ><span class="his-value">1000</span>
+                </li>
+              </ul>
+            </div>
+            <div class="weather">
+              <div
+                class="weather-content"
+                id="ww_92136dcfc61cd"
+                v="1.3"
+                loc="auto"
+                a='{"t":"horizontal","lang":"en","sl_lpl":1,"ids":[],"font":"Arial","sl_ics":"one_a","sl_sot":"celsius","cl_bkg":"rgba(45,168,132,1)","cl_font":"#FFFFFF","cl_cloud":"#FFFFFF","cl_persp":"#81D4FA","cl_sun":"#FFC107","cl_moon":"#FFC107","cl_thund":"#FF5722"}'
+              >
+                More forecasts:
+                <a
+                  href="https://oneweather.org/new_york_city/30_days/"
+                  id="ww_92136dcfc61cd_u"
+                  target="_blank"
+                  >New York weather 30 day forecast</a
+                >
+              </div>
+            </div>
+          </section>
+        </div>
+      </main>
+    </div>
+
+    <!-- link Ionicons  -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <!-- link main js -->
+    <script src="../js/script.js"></script>
+    <!-- link weather  -->
+    <script
+      async
+      src="https://app2.weatherwidget.org/js/?id=ww_92136dcfc61cd"
+    ></script>
+  </body>
+</html>

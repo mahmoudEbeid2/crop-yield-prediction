@@ -1,0 +1,26 @@
+@media (max-width: 63.5em) {
+  html {
+    /* 9px / 16px  */
+    font-size: 56.25%;
+  }
+}
+
+/***********************.***/
+/* BELOW 944px (Tablets) */
+/**************************/
+
+@media (max-width: 59em) {
+  html {
+    /* 9px / 16px  */
+    font-size: 50%;
+  }
+
+  .forgot-content {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .container {
+    padding: 2rem;
+  }
+}

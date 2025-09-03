@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="keywords"
+      content="artificial intelligence,artificial intelligence in agriculture,agriculture,artificial intelligence (ai) in agriculture,ai in agriculture,(ai) artificial intelligence in agriculture,artificial intellegence agriculture,artificial intelligence is transforming agriculture,agriculture technology,artificial intelligence in agriculture and plant pathology,what is artificial intelligence,artificial intelligence robot,artificial intelligence explained"
+    />
+    <meta
+      name="description"
+      content="Agriculture with artificial intelligence revolutionizes farming through data-driven decisions. AI optimizes resource allocation, enhances crop monitoring, and predicts weather patterns for better yields. It streamlines tasks, minimizes waste, and promotes sustainable practices, ushering in a new era of precision farming."
+    />
+    <title>The Plant</title>
+    <!-- link with google font (Montserrat) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- link main css file -->
+    <link rel="stylesheet" href="../css/my-info/style.css" />
+    <!-- link responsev css file  -->
+    <link rel="stylesheet" href="../css/my-info/quireas.css" />
+    <!-- link db -->
+    <script type="module" src="../js/my info/myinfo.js"></script>
+    <script type="module" src="../js/display_info.js"></script>
+    <!-- log out  -->
+    <script type="module" src="../js/logout.js"></script>
+    <!-- login cheaker -->
+    <script type="module" src="../js/login-cheaker.js"></script>
+  </head>
+  <body>
+    <div class="page-content">
+      <!-- start header  -->
+      <header>
+        <div class="header-content">
+          <button class="menu-icon">
+            <ion-icon class="mc" name="menu-outline"></ion-icon>
+          </button>
+          <h1 class="main-head">my information</h1>
+          <div class="user-content">
+            <div class="user-info">
+              <p id="uname" class="user-name">user name</p>
+              <img
+                id="ulogo"
+                src="../img/sign-up/avatar.png"
+                alt="user logo"
+                class="user-logo"
+              />
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- start saidbar -->
+      <nav>
+        <div class="nav-content">
+          <img class="logo" src="../img/logo.png" alt="logo" />
+          <ul class="nav-links">
+            <li class="nav-link">
+              <a href="dashbourd.html"
+                ><ion-icon class="as-icon" name="home-outline"></ion-icon
+                ><span>dashbourd</span></a
+              >
+            </li>
+            <li class="nav-link active-link">
+              <a href="my-info.html"
+                ><ion-icon
+                  class="as-icon"
+                  name="information-circle-outline"
+                ></ion-icon
+                ><span>my information</span></a
+              >
+            </li>
+            <li class="nav-link">
+              <a href="../pages/predection.html"
+                ><ion-icon class="as-icon" name="logo-ionitron"></ion-icon
+                ><span>yield predeaction</span></a
+              >
+            </li>
+            <li class="nav-link">
+              <a href="historey.html"
+                ><ion-icon class="as-icon" name="newspaper"></ion-icon
+                ><span>historey</span></a
+              >
+            </li>
+            <li class="nav-link">
+              <a href="cantact-us.html"
+                ><ion-icon class="as-icon" name="call-outline"></ion-icon
+                ><span>contact us</span></a
+              >
+            </li>
+
+            <li class="nav-link log-out">
+              <a id="logout" href="#"
+                ><ion-icon class="as-icon" name="log-out-outline"></ion-icon
+                ><span>log out</span></a
+              >
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <main>
+        <div class="my-info-content">
+          <div class="edit-save-btn">
+            <button id="editSaveButton">edit</button>
+          </div>
+          <div class="info">
+            <div class="uploud-imge">
+              <img
+                src="../img/sign-up/avatar.png"
+                alt="avataer"
+                class="sign-avataer"
+                id="avatar-img"
+              />
+              <input
+                type="file"
+                name="image"
+                id="ImageInput"
+                accept="image/*"
+                disabled
+              />
+              <label class="limge" for="ImageInput">
+                <ion-icon class="icam" name="camera-reverse"></ion-icon>
+              </label>
+            </div>
+
+            <div>
+              <label for="fullNameSingup">full name</label>
+              <input
+                type="text"
+                name="full-name"
+                id="fullNameSingup"
+                placeholder="enter your full name"
+                required
+                disabled
+                value="mahmoud ebeid"
+              />
+              <div id="errorfullnamemessage" style="color: red"></div>
+            </div>
+
+            <div>
+              <label for="emailSignup">email</label>
+              <input
+                type="email"
+                name="semail"
+                id="emailSignup"
+                placeholder="enter your email"
+                required
+                disabled
+                value="mahmoud@gmail.com"
+              />
+              <div id="erroremailmessage"></div>
+            </div>
+            <div>
+              <div class="pass-content">
+                <label for="passwordSingup">password</label>
+                <div class="butoo">
+                  <button class="pass-btn" id="pass-toggle">
+                    <ion-icon
+                      class="pass-icon eye-off"
+                      name="eye-off-outline"
+                    ></ion-icon>
+                    <ion-icon
+                      class="pass-icon eye-on"
+                      name="eye-outline"
+                    ></ion-icon>
+                  </button>
+                </div>
+              </div>
+              <input
+                type="password"
+                name="sign-pass"
+                id="passwordSingup"
+                placeholder="creat password"
+                required
+                disabled
+                value="125888f4d4f5d"
+              />
+              <div id="errorpassmessage" style="color: red"></div>
+            </div>
+            <button id="deletebtn" class="delet-btn">delet my account</button>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <!-- link Ionicons  -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <!-- link main js -->
+    <script src="../js/script.js"></script>
+    <script src="../js/my info/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="keywords"
+      content="artificial intelligence,artificial intelligence in agriculture,agriculture,artificial intelligence (ai) in agriculture,ai in agriculture,(ai) artificial intelligence in agriculture,artificial intellegence agriculture,artificial intelligence is transforming agriculture,agriculture technology,artificial intelligence in agriculture and plant pathology,what is artificial intelligence,artificial intelligence robot,artificial intelligence explained"
+    />
+    <meta
+      name="description"
+      content="Agriculture with artificial intelligence revolutionizes farming through data-driven decisions. AI optimizes resource allocation, enhances crop monitoring, and predicts weather patterns for better yields. It streamlines tasks, minimizes waste, and promotes sustainable practices, ushering in a new era of precision farming."
+    />
+    <title>The Plant</title>
+    <!-- link with google font (Montserrat) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- link main css file -->
+    <link rel="stylesheet" href="../css/predeaction/style.css" />
+    <!-- link responive css file  -->
+    <link rel="stylesheet" href="../css/predeaction/quiers.css" />
+    <!-- link database  -->
+    <script type="module" src="../js/display_info.js"></script>
+    <!-- log out  -->
+    <script type="module" src="../js/logout.js"></script>
+    <!-- login cheaker -->
+    <script type="module" src="../js/login-cheaker.js"></script>
+  </head>
+  <body>
+    <div class="page-content">
+      <!-- start header  -->
+      <header>
+        <div class="header-content">
+          <button class="menu-icon">
+            <ion-icon class="mc" name="menu-outline"></ion-icon>
+          </button>
+          <h1 class="main-head">yield prediction</h1>
+          <div class="user-content">
+            <div class="user-info">
+              <p id="uname" class="user-name">user name</p>
+              <img
+                id="ulogo"
+                src="../img/sign-up/avatar.png"
+                alt="user logo"
+                class="user-logo"
+              />
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- start saidbar -->
+      <nav>
+        <div class="nav-content">
+          <img class="logo" src="../img/logo.png" alt="logo" />
+          <ul class="nav-links">
+            <li class="nav-link">
+              <a href="dashbourd.html"
+                ><ion-icon class="as-icon" name="home-outline"></ion-icon
+                ><span>dashbourd</span></a
+              >
+            </li>
+            <li class="nav-link">
+              <a href="my-info.html"
+                ><ion-icon
+                  class="as-icon"
+                  name="information-circle-outline"
+                ></ion-icon
+                ><span>my information</span></a
+              >
+            </li>
+            <li class="nav-link active-link">
+              <a href="../pages/predection.html"
+                ><ion-icon class="as-icon" name="logo-ionitron"></ion-icon
+                ><span>yield predeaction</span></a
+              >
+            </li>
+            <li class="nav-link">
+              <a href="historey.html"
+                ><ion-icon class="as-icon" name="newspaper"></ion-icon
+                ><span>historey</span></a
+              >
+            </li>
+            <li class="nav-link">
+              <a href="cantact-us.html"
+                ><ion-icon class="as-icon" name="call-outline"></ion-icon
+                ><span>contact us</span></a
+              >
+            </li>
+
+            <li class="nav-link log-out">
+              <a id="logout" href="#"
+                ><ion-icon class="as-icon" name="log-out-outline"></ion-icon
+                ><span>log out</span></a
+              >
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <main>
+        <div class="pred-form">
+          <div>
+            <label for="year">year</label>
+            <input type="number" id="year" name="year" placeholder=" year" />
+          </div>
+          <div class="error" id="erroryear"></div>
+          <div>
+            <label for="avgRain">Average Rainfall(mm/year)</label>
+            <input
+              type="number"
+              name="avRain"
+              id="avgRain"
+              placeholder=" Average Rainfall(mm/year)"
+            />
+          </div>
+          <div class="error" id="errorAvgRainFall"></div>
+          <div>
+            <label for="avgtemp">Average of Temperature</label>
+            <input
+              type="number"
+              name="avgtemp"
+              id="avgtemp"
+              placeholder=" Average of Temperature"
+            />
+          </div>
+          <div class="error" id="errorAvgTemp"></div>
+          <div>
+            <label for="pesticidesTonnes">Quantity of Pesticides(tonnes)</label>
+            <input
+              type="number"
+              name="pesticidesTonnes"
+              id="pesticidesTonnes"
+              placeholder=" Quantity of Pesticides(tonnes)
+            "
+            />
+          </div>
+          <div
+            class="error"
+            id="errorPesticidesTonnes"
+            style="color: red"
+          ></div>
+          <div>
+            <label for="countries">Choose a country:</label>
+            <input
+              list="countryList"
+              id="countries"
+              name="country"
+              placeholder="Choose A Country:            "
+            />
+            <datalist id="countryList" class="dropdown">
+              <option value="Albania"></option>
+              <option value="Algeria"></option>
+              <option value="Angola"></option>
+              <option value="Argentina"></option>
+              <option value="Armenia"></option>
+              <option value="Australia"></option>
+              <option value="Austria"></option>
+              <option value="Azerbaijan"></option>
+              <option value="Bahamas"></option>
+              <option value="Bahrain"></option>
+              <option value="Bangladesh"></option>
+              <option value="Belarus"></option>
+              <option value="Belgium"></option>
+              <option value="Belize"></option>
+              <option value="Bolivia"></option>
+              <option value="Bosnia and Herzegovina"></option>
+              <option value="Botswana"></option>
+              <option value="Brazil"></option>
+              <option value="Bulgaria"></option>
+              <option value="Burkina Faso"></option>
+              <option value="Burundi"></option>
+              <option value="Cameroon"></option>
+              <option value="Canada"></option>
+              <option value="Central African Republic"></option>
+              <option value="Chile"></option>
+              <option value="Colombia"></option>
+              <option value="Croatia"></option>
+              <option value="Denmark"></option>
+              <option value="Dominican Republic"></option>
+              <option value="Ecuador"></option>
+              <option value="Egypt"></option>
+              <option value="El Salvador"></option>
+              <option value="Eritrea"></option>
+              <option value="Estonia"></option>
+              <option value="Finland"></option>
+              <option value="France"></option>
+              <option value="Germany"></option>
+              <option value="Ghana"></option>
+              <option value="Greece"></option>
+              <option value="Guatemala"></option>
+              <option value="Guinea"></option>
+              <option value="Guyana"></option>
+              <option value="Haiti"></option>
+              <option value="Honduras"></option>
+              <option value="Hungary"></option>
+              <option value="India"></option>
+              <option value="Indonesia"></option>
+              <option value="Iraq"></option>
+              <option value="Ireland"></option>
+              <option value="Italy"></option>
+              <option value="Jamaica"></option>
+              <option value="Japan"></option>
+              <option value="Kazakhstan"></option>
+              <option value="Kenya"></option>
+              <option value="Latvia"></option>
+              <option value="Lebanon"></option>
+              <option value="Lesotho"></option>
+              <option value="Libya"></option>
+              <option value="Lithuania"></option>
+              <option value="Madagascar"></option>
+              <option value="Malawi"></option>
+              <option value="Malaysia"></option>
+              <option value="Mali"></option>
+              <option value="Mauritania"></option>
+              <option value="Mauritius"></option>
+              <option value="Mexico"></option>
+              <option value="Montenegro"></option>
+              <option value="Morocco"></option>
+              <option value="Mozambique"></option>
+              <option value="Namibia"></option>
+              <option value="Nepal"></option>
+              <option value="Netherlands"></option>
+              <option value="New Zealand"></option>
+              <option value="Nicaragua"></option>
+              <option value="Niger"></option>
+              <option value="Norway"></option>
+              <option value="Pakistan"></option>
+              <option value="Papua New Guinea"></option>
+              <option value="Peru"></option>
+              <option value="Poland"></option>
+              <option value="Portugal"></option>
+              <option value="Qatar"></option>
+              <option value="Romania"></option>
+              <option value="Rwanda"></option>
+              <option value="Saudi Arabia"></option>
+              <option value="Senegal"></option>
+              <option value="Slovenia"></option>
+              <option value="South Africa"></option>
+              <option value="Spain"></option>
+              <option value="Sri Lanka"></option>
+              <option value="Sudan"></option>
+              <option value="Suriname"></option>
+              <option value="Sweden"></option>
+              <option value="Switzerland"></option>
+              <option value="Tajikistan"></option>
+              <option value="Thailand"></option>
+              <option value="Tunisia"></option>
+              <option value="Turkey"></option>
+              <option value="Uganda"></option>
+              <option value="Ukraine"></option>
+              <option value="United Kingdom"></option>
+              <option value="Uruguay"></option>
+              <option value="Zambia"></option>
+              <option value="Zimbabwe"></option>
+            </datalist>
+          </div>
+          <div class="error" id="errorCountryList"></div>
+          <div>
+            <label for="crops">Choose a crop:</label>
+            <input
+              list="cropList"
+              id="crops"
+              name="crop"
+              placeholder="Choose a crop:"
+            />
+
+            <datalist id="cropList">
+              <option value="Soybeans"></option>
+              <option value="Wheat"></option>
+              <option value="Cassava"></option>
+              <option value="Sweet potatoes"></option>
+              <option value="Plantains and others"></option>
+              <option value="Sorghum"></option>
+              <option value="Rice, paddy"></option>
+              <option value="Yams"></option>
+              <option value="Potatoes"></option>
+              <option value="Maize"></option>
+            </datalist>
+          </div>
+          <div class="error" id="errorcrop"></div>
+          <div>
+            <button class="predict-btn" type="submit">predict</button>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <!-- link Ionicons  -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <!-- link main js -->
+    <script src="../js/script.js"></script>
+    <script src="../js/preadection/predication.js"></script>
+
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+  </body>
+</html>

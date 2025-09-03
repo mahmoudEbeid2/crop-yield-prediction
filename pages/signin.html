@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="keywords"
+      content="artificial intelligence,artificial intelligence in agriculture,agriculture,artificial intelligence (ai) in agriculture,ai in agriculture,(ai) artificial intelligence in agriculture,artificial intellegence agriculture,artificial intelligence is transforming agriculture,agriculture technology,artificial intelligence in agriculture and plant pathology,what is artificial intelligence,artificial intelligence robot,artificial intelligence explained"
+    />
+    <meta
+      name="description"
+      content="Agriculture with artificial intelligence revolutionizes farming through data-driven decisions. AI optimizes resource allocation, enhances crop monitoring, and predicts weather patterns for better yields. It streamlines tasks, minimizes waste, and promotes sustainable practices, ushering in a new era of precision farming."
+    />
+    <title>The Plant</title>
+    <!-- link with google font (Montserrat) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- link main css file -->
+    <link rel="stylesheet" href="../css/login/style.css" />
+    <!-- link queirs file -->
+    <link rel="stylesheet" href="../css/login/quiers.css" />
+  </head>
+  <body>
+    <div class="login-continer">
+      <div class="login">
+        <div class="login-content">
+          <h1>login</h1>
+          <div id="errorlogin"></div>
+          <div>
+            <label for="emailLogin">your email</label>
+            <input
+              type="email"
+              name="lemail"
+              id="emailLogin"
+              placeholder="Enter your email"
+              required
+            />
+          </div>
+          <div>
+            <div class="lpass">
+              <div class="lapas">
+                <label for="passwordSingupLogin">your password </label>
+              </div>
+              <div class="butoo">
+                <button class="pass-btn" id="pass-toggle">
+                  <ion-icon
+                    class="pass-icon eye-off"
+                    name="eye-off-outline"
+                  ></ion-icon>
+                  <ion-icon
+                    class="pass-icon eye-on"
+                    name="eye-outline"
+                  ></ion-icon>
+                </button>
+              </div>
+            </div>
+
+            <input
+              type="password"
+              name="lpassword"
+              id="passwordSingupLogin"
+              class="l-pass"
+              placeholder="Enter your email"
+              required
+            />
+          </div>
+          <div class="log-btn">
+            <button type="submit" id="login">sign in</button>
+          </div>
+          <a
+            class="fpass"
+            href="forgot-password.html"
+            class="fg"
+            target="_blank"
+            >Forget your password?</a
+          >
+        </div>
+        <div class="sign-log">
+          <p class="slog">
+            <span>Don’t have an acount?</span>
+            <a href="sign-up.html">Sign up</a>
+          </p>
+        </div>
+      </div>
+      <div class="login-img" role="img"></div>
+    </div>
+
+    <!-- link ionicons -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <!-- link js file -->
+    <script src="../js/login/script.js"></script>
+
+    <!-- link database -->
+    <script type="module" src="../js/login/login.js"></script>
+  </body>
+</html>

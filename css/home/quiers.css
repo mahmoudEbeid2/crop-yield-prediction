@@ -1,0 +1,200 @@
+/**************************/
+/* BELOW 1200px (Landscape Tablets) */
+/**************************/
+
+@media (max-width: 75em) {
+  html {
+    /* 9px / 16px  */
+    font-size: 56.25%;
+  }
+  .choose-lists {
+    gap: 1.8rem;
+  }
+}
+
+/**************************/
+/* BELOW 944px (Tablets) */
+/**************************/
+
+@media (max-width: 59em) {
+  /* MOBILE NAVIGATION */
+
+  .mobile-btn-nav {
+    display: block;
+    z-index: 2;
+  }
+
+  .nav-content {
+    background-color: hsla(162, 91%, 47%, 0.97);
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(100%);
+    pointer-events: none;
+    transition: all 0.5s ease-in;
+  }
+
+  .nav-attrpiters {
+    display: flex;
+    flex-direction: column;
+    gap: 4.2rem;
+  }
+
+  .nav-attrpiters .nav-attrpite a:link,
+  .nav-attrpiters .nav-attrpite a:visited {
+    font-size: 4.6rem;
+    font-weight: 600;
+  }
+
+  .nav-btns {
+    gap: 5.2rem;
+    text-align: center;
+  }
+
+  .nbtn:link,
+  .nbtn:visited {
+    font-size: 3.6rem;
+    font-weight: 600;
+  }
+
+  /* open nav in mobile  */
+
+  .nav-open .nav-content {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+    pointer-events: auto;
+  }
+
+  .nav-open .mobile-btn-nav [name="menu-outline"] {
+    display: none;
+  }
+
+  .nav-open .mobile-btn-nav [name="close-outline"] {
+    display: block;
+  }
+
+  .services-header {
+    text-align: center;
+    width: 100%;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .img-ch {
+    display: none;
+  }
+
+  .ch-content {
+    text-align: center;
+  }
+
+  .say {
+    padding: 5.2rem;
+  }
+
+  .call-img {
+    display: none;
+  }
+
+  .cont-us {
+    padding: 4.2rem;
+  }
+
+  .footer-content {
+    gap: 2rem;
+  }
+}
+
+/**************************/
+/* BELOW 786px (big mobile) */
+/**************************/
+
+@media (max-width: 52.625em) {
+  .footer-content {
+    grid-template-columns: repeat(2, 1fr);
+
+    row-gap: 9.6rem;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .footer-logo .logo {
+    width: 60%;
+  }
+
+  .footer-call-links,
+  .ffollow {
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+/**************************/
+/* BELOW 704px (Smaller tablets) */
+/**************************/
+
+@media (max-width: 44em) {
+  .footer-content {
+    display: flex;
+    flex-direction: column;
+    gap: 5.2rem;
+  }
+  .footer-logo {
+    margin-top: 2rem;
+  }
+}
+
+/**************************/
+/* BELOW 584px (Phones) */
+/**************************/
+
+@media (max-width: 39.125em) {
+  .say-logo {
+    top: 0;
+    right: 50%;
+    transform: translate(50%, -50%);
+  }
+
+  .grid {
+    gap: 9.6rem;
+  }
+
+  .qutes {
+    text-align: center;
+  }
+
+  .say-con {
+    flex-direction: column;
+    gap: 3rem;
+    text-align: center;
+    align-items: center;
+  }
+}
+
+/**************************/
+/* BELOW 544px (Phones) */
+/**************************/
+
+@media (max-width: 34em) {
+  html {
+    /* 8px / 16px  */
+    font-size: 50%;
+  }
+}

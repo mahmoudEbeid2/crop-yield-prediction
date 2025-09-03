@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="keywords"
+      content="artificial intelligence,artificial intelligence in agriculture,agriculture,artificial intelligence (ai) in agriculture,ai in agriculture,(ai) artificial intelligence in agriculture,artificial intellegence agriculture,artificial intelligence is transforming agriculture,agriculture technology,artificial intelligence in agriculture and plant pathology,what is artificial intelligence,artificial intelligence robot,artificial intelligence explained"
+    />
+    <meta
+      name="description"
+      content="Agriculture with artificial intelligence revolutionizes farming through data-driven decisions. AI optimizes resource allocation, enhances crop monitoring, and predicts weather patterns for better yields. It streamlines tasks, minimizes waste, and promotes sustainable practices, ushering in a new era of precision farming."
+    />
+    <title>The Plant</title>
+    <!-- link with google font (Montserrat) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- link main css file -->
+    <link rel="stylesheet" href="../css/sign-up/style.css" />
+    <!-- link css quiers -->
+    <link rel="stylesheet" href="../css/sign-up/quiers.css" />
+
+    <script type="module" src="../js/sign-up/auth.js"></script>
+  </head>
+  <body>
+    <div class="sign-up-page">
+      <div class="sign-continer">
+        <div class="sign-content">
+          <div class="sign-up">
+            <h1 class="sign-head">sign up</h1>
+            <div class="uploud-imge">
+              <img
+                src="../img/sign-up/avatar.png"
+                alt="avataer"
+                class="sign-avataer"
+                id="avatar-img"
+              />
+              <input
+                type="file"
+                name="image"
+                id="ImageInput"
+                accept="image/*"
+              />
+              <label class="limge" for="ImageInput">
+                <ion-icon class="icam" name="camera"></ion-icon>
+              </label>
+            </div>
+            <div>
+              <label for="fullNameSingup">full name</label>
+              <input
+                type="text"
+                name="full-name"
+                id="fullNameSingup"
+                placeholder="enter your full name"
+                required
+              />
+              <div id="errorfullnamemessage"></div>
+            </div>
+
+            <div>
+              <label for="emailSignup">email</label>
+              <input
+                type="email"
+                name="semail"
+                id="emailSignup"
+                placeholder="enter your email"
+                required
+              />
+              <div id="erroremailmessage"></div>
+            </div>
+            <div>
+              <div class="pass-content">
+                <label for="passwordSingup">password</label>
+                <div class="butoo">
+                  <button class="pass-btn" id="pass-toggle">
+                    <ion-icon
+                      class="pass-icon eye-off"
+                      name="eye-off-outline"
+                    ></ion-icon>
+                    <ion-icon
+                      class="pass-icon eye-on"
+                      name="eye-outline"
+                    ></ion-icon>
+                  </button>
+                </div>
+              </div>
+              <input
+                type="password"
+                name="sign-pass"
+                id="passwordSingup"
+                placeholder="creat password"
+                required
+              />
+              <div id="errorpassmessage"></div>
+            </div>
+            <div>
+              <div class="pass-content">
+                <label for="confirmpasswordSingup">confirm password</label>
+                <div class="butoo">
+                  <button class="pass-btn" id="pass-toggle-confirm">
+                    <ion-icon
+                      class="pass-icon ceye-off"
+                      name="eye-off-outline"
+                    ></ion-icon>
+                    <ion-icon
+                      class="pass-icon ceye-on"
+                      name="eye-outline"
+                    ></ion-icon>
+                  </button>
+                </div>
+              </div>
+
+              <input
+                type="password"
+                name="confirm-pass"
+                id="confirmpasswordSingup"
+                placeholder="confirm password"
+                required
+              />
+              <div id="errorconfirmpassmessage"></div>
+            </div>
+            <div class="privecy-t">
+              <input required type="checkbox" name="p-t" id="pre-tem" />
+              <label class="pt" for="pre-tem"
+                ><span>agree</span>
+                <a href="Privacy-Policy.html" target="_blank">
+                  Privacy Policy</a
+                >
+                <span> & </span>
+                <a href="Terms-Service.html" target="_blank">Terms</a>
+              </label>
+            </div>
+            <div id="errorpolicy"></div>
+            <div class="sign-btn">
+              <button type="submit" id="signup">sign up</button>
+            </div>
+          </div>
+          <p class="al-log">
+            <span>already have an acount?</span> <a href="signin.html">login</a>
+          </p>
+        </div>
+        <div class="sign-img" role="img"></div>
+      </div>
+    </div>
+    <script src="../js/sign-up/script.js"></script>
+
+    <!-- link ionicons -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+
+    <script src="../js/sign-up/script.js"></script>
+  </body>
+</html>

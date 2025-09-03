@@ -1,0 +1,232 @@
+/**************************/
+/* BELOW 1200px (Landscape Tablets) */
+/**************************/
+
+@media (max-width: 75em) {
+  html {
+    /* 9px / 16px  */
+    font-size: 56.25%;
+  }
+
+  .dash2 {
+    grid-template-columns: 1fr;
+  }
+
+  .weather {
+    width: 70%;
+    margin: 0 auto;
+  }
+
+  /* Improve history spacing on tablets */
+  .historey-table {
+    padding: 2rem 2.4rem;
+  }
+  .history {
+    gap: 1.4rem;
+  }
+  .history li {
+    padding: 1rem 0;
+    border-bottom: 1px solid rgba(0,0,0,0.06);
+  }
+  .history li:last-child {
+    border-bottom: none;
+  }
+}
+
+/**************************/
+/* BELOW 1077px (Tablets) */
+/**************************/
+
+@media (max-width: 67.3125em) {
+  .user-info {
+    gap: 1.2rem;
+  }
+
+  .welcem-card {
+    grid-template-columns: 1fr;
+  }
+
+  .card-content {
+    text-align: center;
+  }
+
+  .sidebar-hidden .welcem-card {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .sidebar-hidden .card-content {
+    text-align: left;
+  }
+
+  .sidebar-hidden .weather {
+    width: 50%;
+  }
+
+  /* Make labels wrap nicely */
+  .history li {
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+}
+
+/**************************/
+/* BELOW 835px (Tablets) */
+/**************************/
+
+@media (max-width: 52.1875em) {
+  .page-content {
+    grid-template-columns: 280px 1fr;
+  }
+}
+
+/**************************/
+/* BELOW 786px (big mobile) */
+/**************************/
+
+@media (max-width: 52.625em) {
+  .card-head {
+    font-size: 2.3rem;
+  }
+
+  .page-content {
+    grid-template-columns: 230px 1fr;
+  }
+
+  .nav-link a:link,
+  .nav-link a:visited {
+    font-size: 1.6rem;
+  }
+
+  .weather {
+    width: 90%;
+  }
+
+  .sidebar-hidden .weather {
+    width: 65%;
+  }
+
+  .main-head {
+    font-size: 2rem;
+  }
+
+  /* Two-line layout for history items */
+  .history li {
+    align-items: flex-start;
+  }
+  .his {
+    max-width: 65%;
+    line-height: 1.4;
+  }
+  .his-value {
+    text-align: right;
+    max-width: 35%;
+  }
+}
+
+/**************************/
+/* BELOW 704px (Smaller tablets) */
+/**************************/
+
+@media (max-width: 44em) {
+  html {
+    /* 8px / 16px  */
+    font-size: 50%;
+  }
+
+  .page-content {
+    grid-template-columns: 210px 1fr;
+  }
+
+  .card-head {
+    font-size: 2rem;
+  }
+
+  .sidebar-hidden .welcem-card {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar-hidden .card-content {
+    text-align: center;
+  }
+
+  /* Stack label/value vertically for narrow screens */
+  .history li {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.6rem;
+  }
+  .his,
+  .his-value {
+    max-width: 100%;
+  }
+  .his-value {
+    margin-left: 0;
+    color: #2da884;
+  }
+}
+
+/**************************/
+/* BELOW 595px (Phones) */
+/**************************/
+
+@media (max-width: 37.1875em) {
+  .page-content {
+    grid-template-columns: 50px 1fr;
+  }
+
+  .logo {
+    width: 5.6rem;
+  }
+
+  nav {
+    border-radius: 15px;
+  }
+
+  .nav-link a:link,
+  .nav-link a:visited {
+    padding: 1rem;
+  }
+
+  .nav-link span {
+    display: none;
+  }
+
+  .user-name {
+    display: none;
+  }
+
+  .sidebar-hidden .weather,
+  .weather {
+    width: 100%;
+  }
+
+  /* Card-like items for extra small phones */
+  .history {
+    gap: 1.2rem;
+  }
+  .history li {
+    background: #ffffff;
+    padding: 1.2rem 1.4rem;
+    border-radius: 12px;
+    border: 1px solid rgba(0,0,0,0.06);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+}
+
+/**************************/
+/* small 432px (Phones) */
+/**************************/
+
+@media (max-width: 27em) {
+  .dash-content {
+    padding: 2.9rem 2rem;
+  }
+
+  /* Tighter spacing on very small screens */
+  .historey-head {
+    font-size: 2.2rem;
+  }
+  .history li {
+    padding: 1rem 1.2rem;
+  }
+}

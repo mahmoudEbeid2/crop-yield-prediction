@@ -1,0 +1,298 @@
+/*
+--- 01 TYPOGRAPHY SYSTEM
+
+- Font sizes (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+- Font weights
+Default: 400
+Medium: 500
+Semi-bold: 600
+Bold: 700
+
+- Line heights
+Default: 1
+Small: 1.05
+Medium: 1.2
+Paragraph default: 1.6
+
+- Letter spacing
+-0.5px
+0.75px
+
+--- 02 COLORS
+
+- Primary: #2DA884
+- Tints:
+#96d4c2
+#34fac0
+#09221a
+
+- Shades: 
+
+
+- Accents:
+- Greys
+
+#888
+#767676 (lightest grey allowed on #fff)
+#6f6f6f (lightest grey allowed on #fdf2e9)
+#555
+#333
+
+--- 05 SHADOWS
+
+0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
+
+--- 06 BORDER-RADIUS
+
+Default: 9px
+Medium: 11px
+max: 15px
+--- 07 WHITESPACE
+
+- Spacing system (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+*/
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #96d4c2;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #09221a;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  /* font-size: 10px; */
+  /* 10px / 16px = 0.625 = 62.5% */
+  /* Percentage of user's browser font-size setting */
+  font-size: 62.5%;
+  /* overflow: hidden; */
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  line-height: 1;
+  font-weight: 400;
+  color: #555;
+  background-color: white;
+  overflow-x: hidden;
+  text-transform: capitalize;
+}
+
+.page-content {
+  display: grid;
+  grid-template-columns: 330px 1fr;
+  grid-template-rows: 70px 1fr;
+  height: 100vh;
+}
+
+/* start header  */
+header {
+  /* background-color: #1f765c; */
+  grid-row: 1/1;
+  grid-column: 2/-1;
+  /* border-bottom: 2px solid #09221a; */
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.6rem 3.6rem;
+}
+
+.menu-icon {
+  width: 3.9rem;
+  height: 3.9rem;
+  cursor: pointer;
+  color: #2da884;
+  background: none;
+  outline: none;
+  border: none;
+}
+
+.mc {
+  width: 3.9rem;
+  height: 3.9rem;
+}
+
+.main-head {
+  text-transform: capitalize;
+  font-size: 2.6rem;
+  font-weight: 700;
+  color: #2da884;
+}
+
+.user-info {
+  display: flex;
+  gap: 2.6rem;
+
+  align-items: center;
+}
+
+.user-name {
+  font-size: 1.6rem;
+  /* border-bottom: 1px solid #09221a; */
+  padding: 0.8rem;
+}
+
+.user-logo {
+  width: 3.6rem;
+  height: 3.6rem;
+  border-radius: 50%;
+}
+
+/* start nav  */
+nav {
+  color: white;
+  grid-row: 1 / -1;
+  background-color: #2da884;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+.nav-content {
+  /* padding: 1.2rem; */
+  display: flex;
+  flex-direction: column;
+  gap: 2.2rem;
+}
+
+.logo {
+  width: 16.6rem;
+  align-self: center;
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2.6rem;
+}
+
+.nav-link {
+  margin-left: 1rem;
+}
+
+.nav-link a:link,
+.nav-link a:visited {
+  text-decoration: none;
+  font-size: 1.9rem;
+  padding: 1.6rem 0rem 1.6rem 3.6rem;
+  border-top-left-radius: 22px;
+  border-bottom-left-radius: 22px;
+  font-weight: 600;
+  color: white;
+  text-transform: capitalize;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  transition: all 0.4s;
+}
+
+.nav-link .as-icon {
+  width: 2.6rem;
+  height: 2.6rem;
+}
+
+.active-link a {
+  background-color: white;
+  color: #09221a !important;
+}
+
+.nav-link a:not(.active-link):hover,
+.nav-link a:not(.active-link):focus,
+.nav-link a:not(.active-link):active {
+  background-color: white;
+  color: #09221a;
+}
+
+/* start main  */
+main {
+  grid-row: 2/-1;
+  grid-column: 2/-1;
+  background-color: #eaf6f3;
+  overflow: scroll;
+}
+
+.table-content {
+  padding: 4.6rem 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.2);
+}
+
+th,
+td {
+  padding: 12px 24px;
+  text-align: left;
+}
+
+thead tr {
+  background-image: linear-gradient(#96d4c2, #2da884);
+  color: #fff;
+  font-size: 1.4rem;
+  text-align: center;
+  font-weight: 600;
+}
+
+tbody tr {
+  text-align: left;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: #f8f9fa;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #e9ecef;
+}
+
+/* ************ */
+/* Add styles for when the sidebar is hidden */
+/* ************ */
+
+.sidebar-hidden nav {
+  display: none;
+}
+
+.sidebar-hidden header {
+  grid-column: 1/-1;
+}
+
+.sidebar-hidden main {
+  grid-column: 1/-1;
+}
