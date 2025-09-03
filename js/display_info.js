@@ -3,7 +3,8 @@ import { getAuth, onAuthStateChanged, updatePassword, deleteUser } from "https:/
 import { getFirestore, doc, getDoc, updateDoc } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-firestore.js";
 import { getStorage, ref, uploadBytesResumable, getDownloadURL } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-storage.js";
 
-const firebaseConfig = {
+// Get Firebase configuration from the config manager
+const firebaseConfigData = window.firebaseConfig ? window.firebaseConfig.getConfig() : {
   apiKey: "AIzaSyDV6pScpMLcu69Jo4eMqSAgh_pY8b1Ql2w",
   authDomain: "graduation-project-560f4.firebaseapp.com",
   projectId: "graduation-project-560f4",
@@ -13,7 +14,7 @@ const firebaseConfig = {
   measurementId: "G-ZWFEHLBKMM"
 };
 
-const app = initializeApp(firebaseConfig);
+const app = initializeApp(firebaseConfigData);
 const auth = getAuth(app);
 const db = getFirestore(app);
 

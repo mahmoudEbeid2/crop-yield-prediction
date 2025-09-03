@@ -233,53 +233,233 @@ main {
   overflow: scroll;
 }
 
-.table-content {
+.cards-content {
   padding: 4.6rem 2rem;
   display: flex;
   justify-content: center;
 }
 
-.table-wrapper {
+.cards-container {
   width: 100%;
-  overflow-x: auto;
+  max-width: 1400px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+  gap: 3rem;
+  padding: 1rem;
 }
 
-table {
-  width: 100%;
-  border-collapse: separate;
-  border-spacing: 0;
-  border-radius: 12px;
+.history-card {
+  background: linear-gradient(145deg, #ffffff, #f8f9fa);
+  border-radius: 20px;
+  box-shadow: 
+    0 10px 30px rgba(0, 0, 0, 0.1),
+    0 1px 8px rgba(0, 0, 0, 0.05);
   overflow: hidden;
-  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.2);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid rgba(45, 168, 132, 0.1);
+  position: relative;
 }
 
-th,
-td {
-  padding: 12px 24px;
-  text-align: left;
+.history-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #96d4c2, #2da884, #34fac0);
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
-thead tr {
-  background-image: linear-gradient(#96d4c2, #2da884);
-  color: #fff;
+.history-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 
+    0 20px 40px rgba(0, 0, 0, 0.15),
+    0 8px 25px rgba(45, 168, 132, 0.1);
+  border-color: rgba(45, 168, 132, 0.3);
+}
+
+.history-card:hover::before {
+  opacity: 1;
+}
+
+.card-header {
+  background: linear-gradient(135deg, #2da884 0%, #96d4c2 50%, #34fac0 100%);
+  color: white;
+  padding: 2.5rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.card-header::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+  animation: shimmer 3s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+  0%, 100% { transform: translateX(-100%) translateY(-100%); }
+  50% { transform: translateX(100%) translateY(100%); }
+}
+
+.card-date {
+  font-size: 2rem;
+  font-weight: 800;
+  margin: 0;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  position: relative;
+  z-index: 1;
+}
+
+.card-year {
   font-size: 1.4rem;
+  font-weight: 700;
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(10px);
+  padding: 0.8rem 1.5rem;
+  border-radius: 25px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  position: relative;
+  z-index: 1;
+}
+
+.card-body {
+  padding: 2.5rem;
+  background: linear-gradient(180deg, #ffffff 0%, #fafbfc 100%);
+}
+
+.card-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 0;
+  border-bottom: 1px solid rgba(45, 168, 132, 0.1);
+  font-size: 1.4rem;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.card-row:hover {
+  background-color: rgba(45, 168, 132, 0.02);
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin: 0 -1rem;
+  border-radius: 8px;
+}
+
+.card-row:last-child {
+  border-bottom: none;
+}
+
+.prediction-row {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  margin: 2rem -2.5rem -2.5rem -2.5rem;
+  padding: 2rem 2.5rem;
+  border-radius: 0 0 20px 20px;
+  border-bottom: none !important;
+  font-weight: 700;
+  position: relative;
+  border-top: 2px solid rgba(45, 168, 132, 0.1);
+}
+
+.prediction-row::before {
+  content: '🎯';
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(135deg, #2da884, #96d4c2);
+  color: white;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  box-shadow: 0 4px 15px rgba(45, 168, 132, 0.3);
+}
+
+.card-label {
+  font-weight: 600;
+  color: #444;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.card-label::before {
+  content: '•';
+  color: #2da884;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.card-value {
+  font-weight: 700;
+  color: #2da884;
+  text-align: right;
+  background: rgba(45, 168, 132, 0.1);
+  padding: 0.5rem 1rem;
+  border-radius: 15px;
+  border: 1px solid rgba(45, 168, 132, 0.2);
+  min-width: 80px;
   text-align: center;
+}
+
+.prediction-value {
+  font-size: 1.8rem;
+  color: #2da884;
+  font-weight: 900;
+  background: linear-gradient(135deg, #2da884, #96d4c2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0 2px 4px rgba(45, 168, 132, 0.1);
+  position: relative;
+}
+
+.prediction-value::after {
+  content: ' Tons/Acre';
+  font-size: 1.2rem;
   font-weight: 600;
+  color: #666;
+  -webkit-text-fill-color: #666;
+  background: none;
 }
 
-tbody tr {
-  text-align: left;
-  font-size: 1.4rem;
-  font-weight: 600;
+/* Add loading animation for cards */
+@keyframes cardLoad {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-tbody tr:nth-child(odd) {
-  background-color: #f8f9fa;
+.history-card {
+  animation: cardLoad 0.6s ease-out;
 }
 
-tbody tr:nth-child(even) {
-  background-color: #e9ecef;
-}
+.history-card:nth-child(1) { animation-delay: 0.1s; }
+.history-card:nth-child(2) { animation-delay: 0.2s; }
+.history-card:nth-child(3) { animation-delay: 0.3s; }
+.history-card:nth-child(4) { animation-delay: 0.4s; }
+.history-card:nth-child(5) { animation-delay: 0.5s; }
 
 /* ************ */
 /* Add styles for when the sidebar is hidden */

@@ -138,7 +138,23 @@ document
       if (response2.ok) {
         const decoded = await response2.json();
         const finalResponse = decoded.prediction;
-        showAlert(true, finalResponse);
+        
+        // Save prediction to localStorage
+        const predictionData = {
+          ...formData,
+          prediction: finalResponse
+        };
+        
+        // Import and use history storage
+        if (typeof historyStorage !== 'undefined') {
+          historyStorage.savePrediction(predictionData);
+        }
+        
+        // Clear form fields after successful prediction
+        clearFormFields();
+        
+        // Show success alert and redirect to history
+        showAlertAndRedirect(true, finalResponse);
       } else {
         showAlert(false, finalResponse);
       }
@@ -146,3 +162,54 @@ document
       console.log("Error: " + error);
     }
   });
+
+// Function to clear all form fields
+function clearFormFields() {
+  try {
+    // Clear all input fields
+    document.getElementById("year").value = "";
+    document.getElementById("avgRain").value = "";
+    document.getElementById("avgtemp").value = "";
+    document.getElementById("pesticidesTonnes").value = "";
+    document.getElementById("countries").value = "";
+    document.getElementById("crops").value = "";
+    
+    // Clear all error messages
+    document.getElementById("erroryear").textContent = "";
+    document.getElementById("errorAvgRainFall").textContent = "";
+    document.getElementById("errorAvgTemp").textContent = "";
+    document.getElementById("errorPesticidesTonnes").textContent = "";
+    document.getElementById("errorCountryList").textContent = "";
+    document.getElementById("errorcrop").textContent = "";
+    
+    console.log("Form fields cleared successfully");
+  } catch (error) {
+    console.error("Error clearing form fields:", error);
+  }
+}
+
+// Function to show alert and redirect to history page
+function showAlertAndRedirect(message, value) {
+  if (message === true) {
+
+    swal({
+      title: "Successful!",
+      text: `The Crop Yield Prediction Is ${value} Tons Per Acre`,
+      icon: "success",
+      button: "View History",
+      closeOnClickOutside: false,
+      closeOnEsc: false
+    }).then((value) => {
+      // Redirect to history page
+      window.location.href = "historey.html";
+    });
+document.getElementById("year").value = "";
+document.getElementById("avgRain").value = "";
+document.getElementById("avgtemp").value = "";
+document.getElementById("pesticidesTonnes").value = "";
+document.getElementById("countries").value = "";
+document.getElementById("crops").value = "";
+  } else {
+    swal("Error", "Please Enter Valid Data", "error");
+  }
+}
